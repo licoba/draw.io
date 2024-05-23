@@ -1,0 +1,64 @@
+<mxfile host="65bd71144e">
+    <diagram id="C226EM1P9D3wBFUWGkVr" name="第 1 页">
+        <mxGraphModel dx="934" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4681" pageHeight="3300" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="延迟检测工具&amp;lt;&amp;lt;控制类&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;DetectionController&lt;/b&gt;" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1700" y="1940" width="400" height="343" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="属性" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
+                    <mxGeometry y="50" width="400" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="+ version:String" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
+                    <mxGeometry y="80" width="400" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="2">
+                    <mxGeometry y="135" width="400" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="方法" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
+                    <mxGeometry y="143" width="400" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="+ init(context:Context)&amp;nbsp; 初始化检测SDK&lt;br&gt;+ setCheckParams(params:CheckParams)&amp;nbsp; 设置检测参数&lt;br&gt;+ startCheck()&amp;nbsp; 开始检测&lt;br&gt;+ stopCheck()&amp;nbsp; 停止检测&lt;br&gt;+ submitReport()&amp;nbsp; 提交检测报告&lt;br&gt;+ getVersion():String&amp;nbsp; 获取SDK版本信息&lt;br&gt;&lt;br&gt;+ onHardwareInfoUpdated(hardwareInfo:HardwareInfo) 硬件信息更新&lt;br&gt;+ onNetworkInfoUpdated()&amp;nbsp; &amp;nbsp; &amp;nbsp; 通用网络状态更新&lt;br&gt;+ onEngineStageUpdated(curStage:Int,totalStage:Int)&amp;nbsp; 引擎监测进度更新&lt;br&gt;+ onFinish()&amp;nbsp; &amp;nbsp; 监测成功完成回调&lt;br&gt;+ onError(err:DetectionError)&amp;nbsp; 监测途中异常回调" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
+                    <mxGeometry y="163" width="400" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="单次检测类型&amp;lt;&amp;lt;枚举&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;CheckItemType&lt;/b&gt;" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2370" y="2130" width="190" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="SingleRecognize&amp;nbsp; //单识别&lt;br&gt;SingleTranslate&amp;nbsp; //单翻译&lt;br&gt;SingleTTS&amp;nbsp; &amp;nbsp;//单TTS合成&lt;br&gt;SpeechTranslation&amp;nbsp; //语音翻译" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="10">
+                    <mxGeometry y="40" width="190" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="引擎检测节点&lt;br&gt;&lt;b&gt;EngineDetectionNode&lt;/b&gt;" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1470" y="2350" width="210" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="属性" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="18">
+                    <mxGeometry y="40" width="210" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="- 客户端发起请求&lt;br&gt;- 与服务器建连成功&lt;br&gt;- 客户端第一次收到响应&lt;br&gt;- 客户端发送完毕&lt;br&gt;- 客户端最后一次收到响应&lt;br&gt;- 全部响应完成" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="18">
+                    <mxGeometry y="60" width="210" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="检测参数&lt;br&gt;&lt;b&gt;CheckParams&lt;/b&gt;" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2300" y="1930" width="310" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="属性" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="26">
+                    <mxGeometry y="40" width="310" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="cheItemTypes: MutableListOf&amp;lt;CheckItemType&amp;gt;&amp;nbsp; &amp;nbsp;检测项" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="26">
+                    <mxGeometry y="70" width="310" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="检测错误&amp;lt;&amp;lt;枚举&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;DetectionError&lt;/b&gt;" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2370" y="2310" width="190" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="TimeOut&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// 检测超时&lt;br&gt;NoNetWork&amp;nbsp; &amp;nbsp; &amp;nbsp; // 没有网络&lt;br&gt;NoPermission&amp;nbsp; // 没有权限" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="31">
+                    <mxGeometry y="40" width="190" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="硬件信息&amp;lt;&amp;lt;枚举类&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;HardwareInfo&lt;/b&gt;" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1850" y="2390" width="220" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="- deviceModel:String&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;设备型号&lt;br&gt;- deviceName:String&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;设备名称&lt;br&gt;- systemVersion:String&amp;nbsp; &amp;nbsp; 系统版本&lt;br&gt;- carreir:String&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;运营商&lt;br&gt;- networkType:String&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;网络类型&lt;br&gt;- ipAddress:String&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;IP地址&lt;br&gt;- timeZone:String&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 所在时区" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="34">
+                    <mxGeometry y="40" width="220" height="130" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
